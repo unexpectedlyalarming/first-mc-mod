@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "first-mod",
+	"version": "${version}",
+	"name": "First mod",
+	"description": "A mod that does nothing.",
+	"authors": [
+		"unexpectedlyalarming"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/first-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"unexpectedlyalarming.firstmod.FirstMod"
+		],
+		"client": [
+			"unexpectedlyalarming.firstmod.FirstModClient"
+		],
+		"fabric-datagen": [
+			"unexpectedlyalarming.firstmod.FirstModDataGenerator"
+		]
+	},
+	"mixins": [
+		"first-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
